@@ -1,0 +1,23 @@
+
+
+<button
+  id="btnDisplayDetails"
+  class="btn success"
+  (click)="btnDisplayDetails_click($event)"
+>
+  Display Details
+</button>
+
+<hr />
+<p *ngIf="displayDetails">The quick brown fox jumps over the lazy dogs....</p>
+
+<hr />
+<label>Logs</label>
+<hr />
+<p
+  *ngFor="let userClick of userClicks"
+  [ngStyle]="{ color: userClick.endsWith('Show') ? 'green' : 'red' }"
+  [ngClass]="{'logs': userClicks.length > 5}"
+>
+  {{ userClick }}
+</p>

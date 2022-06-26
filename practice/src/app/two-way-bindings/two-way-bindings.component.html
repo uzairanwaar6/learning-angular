@@ -1,10 +1,14 @@
-<input type="text" [(ngModel)]="username">
+<input type="text" [(ngModel)]="username" />
 <br />
 <br />
-<label>The user name is {{username}}</label>
+<label>The user name is {{ username }}</label>
 
 <hr />
 
-<button id="btnReset" (click)="resetValues($event)" [disabled]="!(username && username.length > 0)">
+<button
+  id="btnReset"
+  (click)="onReset($event)"
+  [disabled]="!(username && username.length > 0)"
+>
   Reset the Value
 </button>
