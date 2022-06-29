@@ -1,8 +1,6 @@
-
-
 <button
   id="btnDisplayDetails"
-  class="btn success"
+  class="btn btn-primary"
   (click)="btnDisplayDetails_click($event)"
 >
   Display Details
@@ -17,7 +15,7 @@
 <p
   *ngFor="let userClick of userClicks"
   [ngStyle]="{ color: userClick.endsWith('Show') ? 'green' : 'red' }"
-  [ngClass]="{'logs': userClicks.length > 5}"
+  [ngClass]="{ logs: userClicks.length > 5 }"
 >
   {{ userClick }}
 </p>
