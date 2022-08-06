@@ -9,7 +9,8 @@ import { DeleteComponent } from './recipes/delete/delete.component';
 import { DetailComponent } from './recipes/detail/detail.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { HeaderComponent } from './header/header.component';
-
+import { FormsModule } from '@angular/forms';
+import {ModalModule} from "ngx-bootstrap/modal";
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,10 +19,12 @@ import { HeaderComponent } from './header/header.component';
     DeleteComponent,
     DetailComponent,
     ShoppingListComponent,
-    HeaderComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ModalModule.forRoot(),
     AppRoutingModule
   ],
   providers: [],

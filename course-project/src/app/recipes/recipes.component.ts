@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IngredientModel, RecipeModel } from './RecipeModel';
 
+
 @Component({
   selector: 'app-recipes',
   templateUrl: './recipes.component.html',
@@ -8,6 +9,7 @@ import { IngredientModel, RecipeModel } from './RecipeModel';
 })
 export class RecipesComponent implements OnInit {
   recipes: RecipeModel[] = [];
+  editRecipe: RecipeModel = new RecipeModel('', [], new Date());
 
   constructor() { }
 
@@ -43,6 +45,20 @@ export class RecipesComponent implements OnInit {
     ],
       new Date()
     ));
+  }
+
+  delete(recipe: RecipeModel): void {
+    this.recipes = this.recipes.filter((filterRecipe: RecipeModel) => {
+      return recipe.name.toLowerCase() !== filterRecipe.name.toLowerCase();
+    });
+  }
+
+  onEdit_click(recipe: RecipeModel) {
+    this.editRecipe = { ...recipe };
+  }
+
+  btnSave_click(index: number) {
+    this.recipes[index] = { ...this.editRecipe };
   }
 
 }
