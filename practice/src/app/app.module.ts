@@ -8,6 +8,10 @@ import { ErrorComponent } from './error/error.component';
 import { FormsModule } from '@angular/forms';
 import { TwoWayBindingsComponent } from './two-way-bindings/two-way-bindings.component';
 import { ConditionalStructuresAndStylingComponent } from './conditional-structures-and-styling/conditional-structures-and-styling.component';
+import { GameComponent } from './game/game.component';
+import { ControllerComponent } from './game/controller/controller.component';
+import { OddComponent } from './game/odd/odd.component';
+import { EvenComponent } from './game/even/even.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +19,11 @@ import { ConditionalStructuresAndStylingComponent } from './conditional-structur
     WarningComponent,
     ErrorComponent,
     TwoWayBindingsComponent,
-    ConditionalStructuresAndStylingComponent
+    ConditionalStructuresAndStylingComponent,
+    GameComponent,
+    ControllerComponent,
+    OddComponent,
+    EvenComponent
   ],
   imports: [
     BrowserModule,
