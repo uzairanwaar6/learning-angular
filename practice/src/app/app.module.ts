@@ -12,6 +12,8 @@ import { GameComponent } from './game/game.component';
 import { ControllerComponent } from './game/controller/controller.component';
 import { OddComponent } from './game/odd/odd.component';
 import { EvenComponent } from './game/even/even.component';
+import { Styling } from './directives/styling.directive';
+import { Double } from './directives/double.directive';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { EvenComponent } from './game/even/even.component';
     GameComponent,
     ControllerComponent,
     OddComponent,
-    EvenComponent
+    EvenComponent,
+    Styling,
+    Double
   ],
   imports: [
     BrowserModule,

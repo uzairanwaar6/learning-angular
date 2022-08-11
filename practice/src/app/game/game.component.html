@@ -1,6 +1,21 @@
 <app-controller (afterStart)="generateComponents($event)"></app-controller>
 
-<ng-container *ngFor="let item of numbers; let i=index">
-  <app-even *ngIf="item % 2 === 0" [number]="item"></app-even>
-  <app-odd *ngIf="item % 2 !== 0" [number]="item"></app-odd>
+<ng-container *ngFor="let item of numbers; let i = index">
+  <ng-container *double="item % 2 === 0">
+    <app-even
+      *ngIf="item % 2 === 0"
+      [number]="item"
+      appStyling="#00FF00"
+      [mouseEnterColor]="'#45FFFF'"
+      [mouseLeaveColor]="'#FF8934'"
+    ></app-even>
+
+    <app-odd
+      *ngIf="item % 2 !== 0"
+      [number]="item"
+      appStyling="#00FFFF"
+      [mouseEnterColor]="'#FF2F66'"
+      [mouseLeaveColor]="'#F3F9F4'"
+    ></app-odd>
+  </ng-container>
 </ng-container>
