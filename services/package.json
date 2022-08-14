@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "push": "git status && git add --all && git commit -am \"Some changes\" && git push; git status"
+    "push": "git status && git add --all && git commit -am \"Some changes\" && git push && git status"
   },
   "private": true,
   "dependencies": {
